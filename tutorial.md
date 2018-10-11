@@ -63,7 +63,7 @@ You can even have double flats/sharps:
 
 As a matter of fact, a note in Alda can have any combination of flats/sharps. It usually isn’t useful to use more than 2 sharps or flats (tops), but there’s nothing stopping you from doing things like this:
 
-    o4 c++++-+-+-+
+    o4 c++++-|-|-+
 
 The above is a really obtuse and unnecessary way to represent an E (a.k.a. a C-sharp-sharp-sharp-sharp-flat-sharp-flat-sharp-flat-sharp) in Alda.
 
@@ -169,13 +169,13 @@ An Alda score can contain any number of instrument parts, which are all played s
 The key thing to notice here is that we have written out individual parts for two instruments, a trumpet and a trombone – one after the other – and when you play the score, you will hear both instruments playing at the same time, in harmony.
 
 You can also write out the parts a little at a time, like this:
+```alda
+trumpet:  o4 c8 d e f g
+trombone: o3 e8 f g a b
 
-    trumpet:  o4 c8 d e f g
-    trombone: o3 e8 f g a b
-
-    trumpet:  a b > c4.
-    trombone: > c d e4.
-
+trumpet:  a b > c4.
+trombone: > c d e4.
+```
 Notice that this example sounds exactly the same as the last example. This demonstrates another important thing about writing scores in Alda: when you switch to another instrument part, the instrument part you were working on still exists, in sort of a “paused” state, ready to pick it back up where you left off once you switch back to that instrument.
 
 ## Global attributes ##
